@@ -18,3 +18,4 @@ class isAuthorOrReadOnly(BasePermission):
         if request.user == obj.author:
             #если пользователь - автор комментария (рейтинга)
             return True
+            
