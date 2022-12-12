@@ -24,7 +24,10 @@ class Product(models.Model):
         ratings = self.ratings.all()
         values = []
         for rating in ratings:
-            values.append(rating.values)
+            values.append(rating.value)
         if values:
             return sum(values) / len(values)
         return 0
+
+    class Meta:
+        ordering = ['id']
